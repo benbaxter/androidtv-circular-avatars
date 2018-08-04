@@ -32,13 +32,13 @@ class MainFragment : BrowseSupportFragment() {
 
     private lateinit var rowsAdapter: ArrayObjectAdapter
 
-    val customListRowPresenter = object : ListRowPresenter() {
+    private val customListRowPresenter = object : ListRowPresenter() {
         override fun isUsingDefaultListSelectEffect() = false
     }.apply {
         shadowEnabled = false
     }
 
-    val defaultListRowPresenter = ListRowPresenter()
+    private val defaultListRowPresenter = ListRowPresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
